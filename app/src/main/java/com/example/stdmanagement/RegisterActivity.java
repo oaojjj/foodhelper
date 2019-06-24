@@ -46,6 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
                 /* 인풋 파라메터값 생성 */
                 String param = "stdID=" + stdid + "&stdPassword=" + stdpassword + "&stdPhone="+stdphone;
                 Log.d("info_rgs9999",stdid+"/"+stdpassword+"/"+stdphone);
+
                 try {
                     /* 서버연결 */
                     URL url = new URL(

@@ -16,8 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@color/colorPrimary"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -37,23 +37,21 @@
 
         </LinearLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
+
+        <EditText
+            android:id="@+id/et_stdID"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="50dp">
-            <EditText
-                android:id="@+id/et_stdID"
-                android:layout_width="230dp"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:drawableLeft="@drawable/ic_person_black_24dp"
-                android:hint="학번"
-                android:inputType="number"
-                android:padding="10dp"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff" />
-        </android.support.design.widget.TextInputLayout >
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:hint="학번"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
+
 
         <EditText
             android:id="@+id/et_stdPassword"
@@ -100,7 +98,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/logo2" />
 
     </LinearLayout>
 

@@ -23,6 +23,24 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout3"
         app:layout_constraintVertical_bias="0.606" />
 
+    <TextView
+        android:id="@+id/tv_average"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.364" />
+
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -51,7 +69,7 @@
             android:weightSum="2">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tv_menuInfo"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.2"
@@ -68,22 +86,23 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/tv_pirce"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:text="price"
                     android:textSize="28dp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="★:average"
+                    android:text="★"
                     android:textColor="#FFC107"
                     android:textSize="22dp" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -99,7 +118,6 @@
                 style="@android:style/Widget.DeviceDefault.Light.RatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:interpolator="false"
                 android:max="5"
                 android:numStars="5"
                 android:progressTint="#FFC107"
@@ -107,10 +125,10 @@
                 android:stepSize="0.5" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/bt_saveAVG"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="먹고싶어요_버튼?(미정)"
+                android:text="저장"
                 android:textColorLink="#FFEB3B" />
 
         </LinearLayout>

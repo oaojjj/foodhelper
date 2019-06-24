@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--xmlns:app 이 라인이 있어야 밑에 app가 오류안뜸  -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" 돌 집"
+        android:fontFamily="@font/bmuma"
+        android:textSize="40dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/grass"/>
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF7F50">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <!-- 그릴 시작-->
+            <TextView
+                android:id="@+id/grill_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bmuma"
+                android:text="그릴"
+                android:gravity="center"
+                android:background="#8B4513"
+                android:textSize="30dp"
+                />
+
+            <!--그릴 버튼1 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/grill_img1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_grill_bulgogi_vegetable" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/grill_btn1"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="불고기야채철판볶음밥"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/grill_star1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--그릴 버튼1 끝-->
+            <!--그릴 버튼2 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/grill_img2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_grill_chick_vegetable" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/grill_btn2"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="닭야채철판볶음밥"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/grill_star2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--그릴 버튼2 끝-->
+            <!--그릴 버튼3 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/grill_img3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_grill_nalchibaby" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/grill_btn3"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="날치알김치철판볶음밥"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/grill_star3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--그릴 버튼3 끝-->
+            <!-- 그릴 끝-->
+            <!-- 분식 시작-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bmuma"
+                android:text="분식"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:background="#8B4513"
+                />
+
+            <!--분식 버튼1 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/shcool_img1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_school_chickencupbab" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/school_btn1"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="닭갈비컵밥 + 만두라면"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:fontFamily="@font/bmuma"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/school_star1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:fontFamily="@font/bmuma"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--분식 버튼1 끝-->
+            <!--분식 버튼2 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/shcool_img2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_school_jjagechi" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/school_btn2"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="짜계치"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:fontFamily="@font/bmuma"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/school_star2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:fontFamily="@font/bmuma"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--분식 버튼2 끝-->
+            <!--분식 끝-->
+            <!--오븐 시작-->
+            <TextView
+                android:id="@+id/oven_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bmuma"
+                android:text="오븐"
+                android:gravity="center"
+                android:background="#8B4513"
+                android:textSize="30dp"
+                />
+            <!--오븐 버튼1 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/oven_img1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_oven_potatopizza" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/oven_btn1"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="포테이토 또띠아 피자"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/oven_star1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--오븐 버튼1 끝-->
+            <!--오븐 버튼2 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/oven_img2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_oven_sweetpotatopizza" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/oven_btn2"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="고구마무스 또띠아 피자"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/oven_star2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--오븐 버튼2 끝-->
+            <!--오븐 버튼3 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/oven_img3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_kimchigratang" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/oven_btn3"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="김치그라탕"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/oven_star3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--오븐 버튼3 끝-->
+            <!-- 오븐 끝-->
+            <!--한식 시작-->
+            <TextView
+                android:id="@+id/stone_kr_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bmuma"
+                android:text="한식"
+                android:gravity="center"
+                android:background="#8B4513"
+                android:textSize="30dp"
+                />
+
+            <!--한식 버튼1 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/stone_kr_img1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_kr_chickencuprice" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/stone_kr_btn1"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="닭갈비컵밥"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/stone_kr_star1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--한식 버튼1 끝-->
+            <!--한식 버튼2 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/stone_kr_img2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_kr_eggsoycuprice" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/stone_kr_btn2"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="달걀간장컵밥"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/stone_kr_star2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--한식 버튼2 끝-->
+            <!--한식 버튼3 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/stone_kr_img3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_kr_porkrice" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/stone_kr_btn3"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="제육덮밥"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/stone_kr_star3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--한식 버튼3 끝-->
+            <!--한식 버튼4 시작-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/stone_kr_img4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/stone_kr_tuna_vegetable_rice" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/stone_kr_btn4"
+                        android:layout_width="270dp"
+                        android:layout_height="100dp"
+                        android:text="참치야채비빔밥"
+                        android:fontFamily="@font/bmuma"
+                        android:textSize="23dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:text="★\n"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:id="@+id/stone_kr_star4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="4.5"
+                            android:textSize="20dp"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--한식 버튼4 끝-->
+            <!-- 한식 끝-->
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
