@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+    //TODO 메뉴 레이아웃 리사이클러뷰로 만들기
     Button btNew,btOld,btStone;
 
     @Override

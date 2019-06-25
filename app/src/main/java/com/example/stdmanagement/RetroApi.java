@@ -15,5 +15,9 @@ public interface RetroApi {
 
     @GET("CheckID.php")
     Call<ResponseBody> CheckID(@Query("stdID") String id);
+
+    @FormUrlEncoded
+    @POST("Login.php")
+    Call<ResponseBody> Login(@Field("stdID") String id,@Field("stdPassword") String pwd);
 }
 
