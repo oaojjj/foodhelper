@@ -10,7 +10,9 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/textView"
@@ -23,20 +25,35 @@
             android:textSize="30dp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/et_rgsID"
-            android:layout_width="250dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:background="@color/colorPrimary"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
-            android:ems="10"
-            android:hint="학번"
-            android:inputType="number"
-            android:padding="10dp"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff" />
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_rgsID"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:ems="10"
+                android:hint="학번"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff" />
+
+            <Button
+                android:id="@+id/bt_checkid"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="중복체크"
+                android:textSize="10dp" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/et_rgsPassword"
@@ -68,12 +85,20 @@
             android:textColor="#ffffff"
             android:textColorHint="#ffffff" />
 
+        <TextView
+            android:id="@+id/tv_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="*학번 비밀번호 필수 입력" />
+
         <Button
             android:id="@+id/bt_register2"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="5dp"
             android:text="등 록"
             android:textSize="20dp" />
 
