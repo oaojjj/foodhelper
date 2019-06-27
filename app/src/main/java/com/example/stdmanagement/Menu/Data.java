@@ -1,9 +1,8 @@
-package com.example.stdmanagement;
+package com.example.stdmanagement.Menu;
 
 public class Data {
     private String type;
     private String name;
-    private String title;
     private String content;
     private int resId;
 
@@ -16,14 +15,6 @@ public class Data {
     }
     public void setName(String name){
         this.name = name;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getContent() {

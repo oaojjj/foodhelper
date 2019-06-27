@@ -6,7 +6,7 @@
     android:padding="8dp"
     android:gravity="center_vertical"
     android:layout_marginBottom="8dp"
-    android:background="@color/colorPrimary">
+    android:background="#F78A5F">
 
     <ImageView
         android:id="@+id/iv_foodPhoto"
@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:src="@mipmap/ic_launcher"
         android:layout_marginRight="8dp"
-       />
+        />
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -24,10 +24,10 @@
         android:gravity="center_vertical"
         >
         <TextView
-            android:id="@+id/textView0"
+            android:id="@+id/tv_type"
             android:layout_width="25dp"
             android:layout_height="match_parent"
-            android:text="종류"
+            android:text="한\n식"
             android:textSize="20dp"
             android:layout_marginRight="8dp"
             android:fontFamily="@font/bmuma"
@@ -38,7 +38,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:text="음식이름"
+            android:text="고추장 불고기 비빔밥"
             android:fontFamily="@font/bmuma"
             android:layout_marginRight="10dp"
             android:gravity="center"
@@ -49,9 +49,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal"
-           >
+            >
             <TextView
-                android:id="@+id/textview1"
+                android:id="@+id/textView1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -62,7 +62,7 @@
                 android:layout_gravity="center"/>
 
             <TextView
-                android:id="@+id/tv_average"
+                android:id="@+id/tv_avg"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:gravity="center"

@@ -1,16 +1,17 @@
 package com.example.stdmanagement.Menu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.stdmanagement.Data;
+import com.example.stdmanagement.MenuInfoActivity;
 import com.example.stdmanagement.R;
 
 import java.util.ArrayList;
@@ -52,43 +53,37 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     // RecyclerView의 핵심인 ViewHolder 입니다.
     // 여기서 subView를 setting 해줍니다.
     class ItemViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
-        private TextView textView0;
-        private TextView textView1;
-        private TextView textView2;
-        private ImageView imageView;
-        private TextView textView;
+        private TextView tvType;
+        private TextView tvAvg;
+        private ImageView ivFoodPhoto;
+        private TextView tvFoodName;
         private Data data;
 
         ItemViewHolder(View itemView) {
             super(itemView);
-            textView0 = itemView.findViewById(R.id.textView0);
-            textView = itemView.findViewById(R.id.textView);
-            textView1 = itemView.findViewById(R.id.textView1);
-            textView2 = itemView.findViewById(R.id.textView2);
-            imageView = itemView.findViewById(R.id.imageView);
+            tvType = itemView.findViewById(R.id.tv_type);
+            tvFoodName = itemView.findViewById(R.id.tv_foodName);
+            tvAvg = itemView.findViewById(R.id.tv_avg);
+            ivFoodPhoto = itemView.findViewById(R.id.iv_foodPhoto);
         }
 
         void onBind(Data data) {
             this.data = data;
-            textView0.setText(data.getType());
-            textView.setText(data.getName());
-            textView1.setText(data.getTitle());
-            textView2.setText(data.getContent());
-            imageView.setImageResource(data.getResId());
+            tvType.setText(data.getType());
+            tvFoodName.setText(data.getName());
+            tvAvg.setText(data.getContent());
+            ivFoodPhoto.setImageResource(data.getResId());
 
 
-            textView.setOnClickListener(this);
+            tvFoodName.setOnClickListener(this);
 
         }
 
         @Override
         public void onClick(View v) {
-            switch (v.getId()){
-
-                case R.id.textView:
-                    Toast.makeText(context,"TITLE : " + data.getTitle() + "\nContent : " +
-                            data.getContent(), Toast.LENGTH_SHORT).show();
-            }
+            Intent intent = new Intent(context.getApplicationContext(), MenuInfoActivity.class);
+            intent.putExtra("foodName",tvFoodName.getText().toString());
+            context.startActivity(intent);
         }
     }
 }

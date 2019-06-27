@@ -1,14 +1,13 @@
 package com.example.stdmanagement;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.stdmanagement.Menu.New_MenuActivity;
-import com.example.stdmanagement.Menu.Old_MenuActivity;
-import com.example.stdmanagement.Menu.Stone_MenuActivity;
+import com.example.stdmanagement.Menu.MenuActivity;
 
 public class MainActivity extends AppCompatActivity {
     //TODO 메뉴 레이아웃 리사이클러뷰로 만들기
@@ -26,23 +25,28 @@ public class MainActivity extends AppCompatActivity {
         btNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), New_MenuActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                intent.putExtra("cafe_type",btNew.getText().toString());
                 startActivity(intent);
+
             }
         });
-
         btOld.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Old_MenuActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                intent.putExtra("cafe_type",btOld.getText().toString());
                 startActivity(intent);
+
             }
         });
         btStone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Stone_MenuActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                intent.putExtra("cafe_type",btStone.getText().toString());
                 startActivity(intent);
+
             }
         });
 

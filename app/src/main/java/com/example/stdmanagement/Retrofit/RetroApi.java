@@ -1,4 +1,6 @@
-package com.example.stdmanagement;
+package com.example.stdmanagement.Retrofit;
+
+import java.util.Map;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -7,6 +9,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 
 public interface RetroApi {
     @FormUrlEncoded
@@ -19,5 +22,8 @@ public interface RetroApi {
     @FormUrlEncoded
     @POST("Login.php")
     Call<ResponseBody> Login(@Field("stdID") String id,@Field("stdPassword") String pwd);
+
+    @GET("FoodData.php")
+    Call<ResponseBody> FoodData (@QueryMap Map<String,String> jsonData);
 }
 
