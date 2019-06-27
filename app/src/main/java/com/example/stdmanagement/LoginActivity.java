@@ -19,11 +19,11 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
     //TODO SharedPreference를 이용한 자동로그인 기능 만들기
-     Button rgsbutton,loginbutton;
-     EditText etstdid,etstdpwd;
-     String stdid,stdpwd;
-     String flagCode;
-     AlertDialog dialog;
+    Button rgsbutton,loginbutton;
+    EditText etstdid,etstdpwd;
+    String stdid,stdpwd;
+    String flagCode;
+    AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
