@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.stdmanagement.MenuComment.CommentAdapter;
 import com.example.stdmanagement.MenuComment.CommentItems;
@@ -24,10 +23,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Map;
 
 import okhttp3.ResponseBody;
@@ -58,6 +54,8 @@ public class MenuInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_info);
 
+
+
         final String userid = LoginActivity.userID;
         int i;
 
@@ -68,6 +66,7 @@ public class MenuInfoActivity extends AppCompatActivity {
         btRatingCommit = findViewById(R.id.bt_ratingCommit);
         btCommentCommit = findViewById(R.id.bt_commit);
         etComment = findViewById(R.id.et_comment);
+
         final RecyclerView recyclerView = findViewById(R.id.rv_comment);
 
         Intent intent = getIntent();
@@ -87,6 +86,47 @@ public class MenuInfoActivity extends AppCompatActivity {
             }
         }
 
+        btCommentCommit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String comment = etComment.getText().toString();
+
+                Call<ResponseBody> call3 = RetrofitClient
+                        .getInstance()
+                        .getApi()
+                        .InsertComment(id,userid,comment);
+
+                call3.enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        Log.d("test99999",response.message());
+                        Boolean flag = null;
+                        try {
+                            flag = Boolean.valueOf(response.body().string());
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        if(flag){
+                            AlertDialog.Builder builder = new AlertDialog.Builder(MenuInfoActivity.this);
+                            dialog = builder.setMessage("한줄평을 남겼습니다.")
+                                    .create();
+                            dialog.show();
+                        }
+                        else{
+                            AlertDialog.Builder builder = new AlertDialog.Builder(MenuInfoActivity.this);
+                            dialog = builder.setMessage("이미 한줄평이 있습니다.")
+                                    .create();
+                            dialog.show();
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+
+                    }
+                });
+            }
+        });
+
         Call<ResponseBody> call2 = RetrofitClient
                 .getInstance()
                 .getApi()
@@ -103,13 +143,11 @@ public class MenuInfoActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response.body().string());
                     JSONArray jsonArray = jsonObject.getJSONArray("comment");
 
-                    itemsArrayList.clear();
-                    adapter.notifyDataSetChanged();
-
+                    Log.d("what_is_json?",jsonArray.toString());
                     for(int j=0;j<jsonArray.length();j++){
                         JSONObject item = jsonArray.getJSONObject(j);
 
-                        CommentItems items = new CommentItems(item.optString("stdID"),item.optString("comment"));
+                        CommentItems items = new CommentItems(item.optString("stdID"),item.optString("comment"),item.optString("time"));
                         itemsArrayList.add(items);
                     }
 
@@ -205,9 +243,6 @@ public class MenuInfoActivity extends AppCompatActivity {
                 });
             }
         });
-
-
-
 
     }
     @Override

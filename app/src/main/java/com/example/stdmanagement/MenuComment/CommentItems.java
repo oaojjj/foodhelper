@@ -4,6 +4,21 @@ public class CommentItems {
 
     private String stdID;
     private String comment;
+    private String date;
+
+    public CommentItems(String stdID, String comment, String date) {
+        this.stdID = stdID;
+        this.comment = comment;
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public CommentItems(String stdID, String comment) {
         this.stdID = stdID;

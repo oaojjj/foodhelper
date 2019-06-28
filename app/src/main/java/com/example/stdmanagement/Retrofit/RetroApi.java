@@ -36,5 +36,8 @@ public interface RetroApi {
 
     @GET("Comment.php")
     Call<ResponseBody> Comment(@Query("id") String id);
+
+    @GET("InsertComment.php")
+    Call<ResponseBody> InsertComment(@Query("id") String foodID,@Query("stdID") String id,@Query("comment") String comment);
 }
 

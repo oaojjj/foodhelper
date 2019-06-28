@@ -96,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                                 else if(flagCode.equals("1002")){
                                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                                    dialog = builder.setMessage("비밀번호를 틀렸습니다.")
+                                    dialog = builder.setMessage("비밀번호가 틀렸습니다.")
                                             .setPositiveButton("확인",null)
                                             .create();
                                     dialog.show();

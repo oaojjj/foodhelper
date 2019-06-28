@@ -34,6 +34,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentViewHolder> {
 
         commentViewHolder.stdID.setText(item.getStdID());
         commentViewHolder.comment.setText(item.getComment());
+        commentViewHolder.date.setText(item.getDate());
 
     }
 
