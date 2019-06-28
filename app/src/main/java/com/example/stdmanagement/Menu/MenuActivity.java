@@ -31,9 +31,10 @@ import retrofit2.Response;
 
 public class MenuActivity extends AppCompatActivity {
 
-    TextView cafeType;
+    TextView cafeType,avg_rating;
     private RecyclerAdapter adapter;
     String sType;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +61,8 @@ public class MenuActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    private void getData() {
-        // 임의의 데이터입니다.
+    private void getData() { // 임의의 데이터입니다.
+
 
         final ArrayList<Map<String,String>> mapArrayList = new ArrayList<>();
         Map map= new HashMap();
@@ -90,10 +91,10 @@ public class MenuActivity extends AppCompatActivity {
                         map.put("type",items.optString("type"));
                         map.put("price",items.optString("price"));
                         map.put("info",items.optString("info"));
-                        map.put("avg_raing",items.optString("avg_raing"));
+                        map.put("avg_rating",items.optString("avg_rating"));
 
                         mapArrayList.add(map);
-                        Log.d("test1111111",mapArrayList.get(i).toString());
+                        Log.d("test02",mapArrayList.get(i).toString());
                     }
 
                     RetrofitData retrofitData = new RetrofitData();
@@ -105,20 +106,20 @@ public class MenuActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                for (int i = 0; i < mapArrayList.size(); i++) {
-                    // 각 List의 값들을 data 객체에 set 해줍니다.
+                for (int i = 0; i < mapArrayList.size(); i++) {  // 각 List의 값들을 data 객체에 set 해줍니다.
+
                     if(sType.substring(0,2).equals(mapArrayList.get(i).get("cafe_type"))){
                         Data data = new Data();
                         data.setType(mapArrayList.get(i).get("type"));
                         data.setName(mapArrayList.get(i).get("kor_name"));
                         data.setContent(mapArrayList.get(i).get("avg_rating"));
                         data.setResId(R.drawable.foodphoto);
-                        // 각 값이 들어간 data를 adapter에 추가합니다.
-                        adapter.addItem(data);
+
+                        adapter.addItem(data);  // 각 값이 들어간 data를 adapter에 추가합니다.
                     }
                 }
-                // adapter의 값이 변경되었다는 것을 알려줍니다.
-                adapter.notifyDataSetChanged();
+
+                adapter.notifyDataSetChanged();  // adapter의 값이 변경되었다는 것을 알려줍니다.
 
             }
 

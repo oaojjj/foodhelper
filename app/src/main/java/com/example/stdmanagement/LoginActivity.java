@@ -27,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
     String flagCode;
     AlertDialog dialog;
 
+    public static String userID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +84,8 @@ public class LoginActivity extends AppCompatActivity {
                             }
                             else{
                                 if (flagCode.equals("1000")){
+                                    userID = stdid;
+                                    Log.d("test01",userID);
                                     AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                     dialog = builder.setMessage("로그인에 성공하셨습니다.")
                                             .create();

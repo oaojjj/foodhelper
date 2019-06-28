@@ -1,5 +1,7 @@
 package com.example.stdmanagement.Retrofit;
 
+import org.w3c.dom.Comment;
+
 import java.util.Map;
 
 import okhttp3.ResponseBody;
@@ -24,6 +26,15 @@ public interface RetroApi {
     Call<ResponseBody> Login(@Field("stdID") String id,@Field("stdPassword") String pwd);
 
     @GET("FoodData.php")
-    Call<ResponseBody> FoodData (@QueryMap Map<String,String> jsonData);
+    Call<ResponseBody> FoodData (@QueryMap Map<String,Object> jsonData);
+
+    @GET("FoodRating.php")
+    Call<ResponseBody> FoodRating (@Query("id") String foodID,@Query("stdID") String id,@Query("rating") String rating);
+
+    @GET("UserRatingInfo.php")
+    Call<ResponseBody> RatingInfo(@Query("id") String FoodID,@Query("stdID") String id);
+
+    @GET("Comment.php")
+    Call<ResponseBody> Comment(@Query("id") String id);
 }
 
