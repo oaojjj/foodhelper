@@ -2,7 +2,7 @@ foodhelper
 ==========
 2학년 1학기 WAP프로젝트
 
-부경대 학식 도우미(미완성)
+부경대 학식 도우미
 ------------------------
 <div margin-right:10px>
 <img width="230" src="https://user-images.githubusercontent.com/49146043/60718676-4bdd9380-9f60-11e9-8780-dd7fe9be8cf7.PNG" hspace=20>
